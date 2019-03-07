@@ -1,0 +1,134 @@
+Local Enviroment Setup & Laravel Installation
+
+1 .xampp
+2. git bash
+
+3. composer
+
+https://getcomposer.org/download/
+
+click composer-Setup.exe
+do not select developer mode, which will give us full download
+
+
+open git bash in htdocs
+type: composer
+you should be able to see all composer commands
+
+First, download the Laravel installer using Composer:
+
+https://laravel.com/docs/5.8/installation
+
+composer global require laravel/installer 
+
+
+composer create-project --prefer-dist laravel/laravel blog
+
+
+check in localhost after installation
+
+http://localhost:8080/blog/public/
+
+
+check migration
+php aritsan migrate
+
+app/provider/appserviceprovider
+
+use Illuminate\Support\Facades\Schema;
+under boot method
+Schema::defaultStringLength(191);
+
+php artisan make:auth
+
+
+change .env which 
+
+
+
+
+echo "# curd" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/sanaullahkhan81/curd.git
+git push -u origin master
+…or push an existing repository from the command line
+git remote add origin https://github.com/sanaullahkhan81/curd.git
+git push -u origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+give url to local only in xampp
+in xampp/apache/config/extra/httpd-vhosts.conf
+
+
+
+<VirtualHost *:8080>
+   
+    DocumentRoot "C:/xampp/htdocs"
+    ServerName localhost
+    
+</VirtualHost>
+
+dont user .dev , .com 
+
+<VirtualHost *:8080>
+  
+    DocumentRoot "C:/xampp/htdocs/public/"
+    ServerName blog.test
+    
+</VirtualHost>
+
+Save
+
+Next open as adminstator empty notepad
+file/open/c://system32/driver/etc/hosts   file
+
+add to theing
+127.0.0.1 localhost
+127.0.0.1 blog.test
+s
+save 
+and restart the xampp apache start stop
+
+
